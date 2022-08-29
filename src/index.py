@@ -120,11 +120,20 @@ for rootAMetricFilePath in rootAJSONFilePaths :
 
     print(var022)
     
-    yearOfMeasurement = '2022'
+    yearOfMeasurement = '2022' 
     
     if ( rootAFilePathIndex%2==0 ) :
         
         yearOfMeasurement = '2017'
+        
+   
+    if ( rootAFilePathIndex > 2 ) :
+            
+        yearOfMeasurement += ' IPV6'
+        
+    else :
+        
+        yearOfMeasurement += ' IPV4'
     
     df = pd.DataFrame({
         # '2017': var2017,
@@ -170,7 +179,7 @@ for rootAMetricFilePath in rootAJSONFilePaths :
 
 rootKJSONFilePaths = ('../Medição 5 K IPV4.json', '../Medição 6 K IPV4.json', '../Medição 7 K IPV6.json', '../Medição 8 K IPV6.json')
 
-rootKFilePathIndex = 0
+rootKFilePathIndex = 1
 
 for rootKMetricFilePath in rootKJSONFilePaths :
 
@@ -292,6 +301,15 @@ for rootKMetricFilePath in rootKJSONFilePaths :
     if ( rootKFilePathIndex%2==0 ) :
         
         yearOfMeasurement = '2022'
+    
+    
+    if ( rootAFilePathIndex > 2 ) :
+            
+        yearOfMeasurement += ' IPV6'
+        
+    else :
+        
+        yearOfMeasurement += ' IPV4'
     
     df = pd.DataFrame({
         # '2017': var2017,
