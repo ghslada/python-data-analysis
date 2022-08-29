@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "995dfa40-d8c8-4eaf-b414-8c5d2f9a7b39",
+		"name": "Atlas RIPE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Medição 1 A IPV4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/10309/results/?start=1661359699&stop=1661360299&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"10309",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1661359699"
+						},
+						{
+							"key": "stop",
+							"value": "1661360299"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 2 A IPV4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/10309/results/?start=1503593299&stop=1503593899&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"10309",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1503593299"
+						},
+						{
+							"key": "stop",
+							"value": "1503593899"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 3 A IPV6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/11309/results/?start=1661359699&stop=1661360299&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"11309",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1661359699"
+						},
+						{
+							"key": "stop",
+							"value": "1661360299"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 4 A IPV6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/11309/results/?start=1503593299&stop=1503593899&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"11309",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1503593299"
+						},
+						{
+							"key": "stop",
+							"value": "1503593899"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 5 K IPV4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/10301/results/?start=1661359699&stop=1661360299&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"10301",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1661359699"
+						},
+						{
+							"key": "stop",
+							"value": "1661360299"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 6 K IPV4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/10301/results/?start=1503593299&stop=1503593899&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"10301",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1503593299"
+						},
+						{
+							"key": "stop",
+							"value": "1503593899"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 7 K IPV6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/11301/results/?start=1661359699&stop=1661360299&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"11301",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1661359699"
+						},
+						{
+							"key": "stop",
+							"value": "1661360299"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medição 8 K IPV6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://atlas.ripe.net/api/v2/measurements/11301/results/?start=1503593299&stop=1503593899&format=json",
+					"protocol": "https",
+					"host": [
+						"atlas",
+						"ripe",
+						"net"
+					],
+					"path": [
+						"api",
+						"v2",
+						"measurements",
+						"11301",
+						"results",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1503593299"
+						},
+						{
+							"key": "stop",
+							"value": "1503593899"
+						},
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
