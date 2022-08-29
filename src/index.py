@@ -296,14 +296,14 @@ for rootKMetricFilePath in rootKJSONFilePaths :
     
     # Example END
     
-    yearOfMeasurement = '2017'
+    yearOfMeasurement = '2022'
     
     if ( rootKFilePathIndex%2==0 ) :
         
-        yearOfMeasurement = '2022'
+        yearOfMeasurement = '2017'
     
     
-    if ( rootAFilePathIndex > 2 ) :
+    if ( rootKFilePathIndex > 2 ) :
             
         yearOfMeasurement += ' IPV6'
         
