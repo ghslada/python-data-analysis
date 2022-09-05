@@ -110,17 +110,25 @@ def parseMetrics (filePath) :
 
                                 # Parse do nome do servidor, para buscar apenas a localidade
 
-                                answerFromCountry = rootKParse.parseRootKHostname(answers)
+                                answerFromCountry = ''
+
+                                if ( 'k.ripe.net' in str(answers[0]['RDATA'][0]) ) :
+
+                                    answerFromCountry = rootKParse.parseRootKHostname(answers)
 
                                 # Se a chave do IP de origem já existir nos resultados    
                                     
-                                if ( medicao['src_addr'] in resultsByIpSrc ):
+                                if ( medicao['src_addr'] in resultsByIpSrc and answerFromCountry != '' ) :
                                     
                                     resultsByIpSrc[medicao['src_addr']].append( answerFromCountry )        
 
                                 else:
 
-                                    resultsByIpSrc[medicao['src_addr']] = [answerFromCountry]        
+                                    if ( answerFromCountry != '' ) :
+                                    
+                                        # Inicializa a chave no dicionário com o endereço de origem da requisição 
+                                        # atribuindo o valor de um array com o primeiro valor a primeira resposta contendo a localidade do servidor K
+                                        resultsByIpSrc[medicao['src_addr']] = [answerFromCountry]        
 
                                 # Incrementa o número de respostas com sucesso
                                 answersCount+=1

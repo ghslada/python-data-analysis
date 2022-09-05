@@ -15,17 +15,31 @@ def parseRootAHostname( answers ) :
     if ( '-' in answer ) :
 
         answerFromCountry = answer.split('-', 2)[1]
+            
+        print(answerFromCountry)
 
         answerFromCountry = re.sub(r'[0-9]', '', answerFromCountry)
 
         answerFromCountry = re.sub(r'-', '', answerFromCountry)
+        
+        if ( len(answerFromCountry) <= 5 ) :
+        
+            if len(answerFromCountry) == 5 :
+                
+                answerFromCountry = answerFromCountry[2:]
+        
+        else :
+            
+            answerFromCountry = ''
 
 
     else :
 
-        answerFromCountry = answer
-    
+        answerFromCountry = ''
+            
+            
     return answerFromCountry
+
 
 def parseMetrics (filePath) :
     
@@ -97,13 +111,15 @@ def parseMetrics (filePath) :
 
                                 # Se a chave do IP de origem já existir nos resultados    
                                     
-                                if ( medicao['src_addr'] in resultsByIpSrc ):
+                                if ( medicao['src_addr'] in resultsByIpSrc and len(answerFromCountry) > 1 ):
                                     
                                     resultsByIpSrc[medicao['src_addr']].append( answerFromCountry )        
 
                                 else:
 
-                                    resultsByIpSrc[medicao['src_addr']] = [answerFromCountry]        
+                                    if len(answerFromCountry) > 1 :
+    
+                                        resultsByIpSrc[medicao['src_addr']] = [answerFromCountry]        
 
                                 # Incrementa o número de respostas com sucesso
                                 answersCount+=1

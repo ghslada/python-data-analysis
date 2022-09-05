@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import rootAParse
 import rootKParse
-
+import os
 import utils.PercentageUtils as PercentageUtils
 
 import json
@@ -12,7 +12,7 @@ from pathlib import Path
 #######################################################
 # ROOT A
 
-rootAJSONFilePaths = ('../Medição 1 A IPV4.json', '../Medição 2 A IPV4.json', '../Medição 3 A IPV6.json', '../Medição 4 A IPV6.json')
+rootAJSONFilePaths = ('../metrics/Medição 1 A IPV4.json', '../metrics/Medição 2 A IPV4.json', '../metrics/Medição 3 A IPV6.json', '../metrics/Medição 4 A IPV6.json')
 
 rootAFilePathIndex = 1
         
@@ -69,6 +69,8 @@ for rootAMetricFilePath in rootAJSONFilePaths :
     
     
     print(json.dumps(percentagesPerLocation, indent=4))
+
+    rootAMetricFilePath = rootAMetricFilePath.split('/')[2]
 
     rootAMetricFilePath = rootAMetricFilePath.replace(r'.', '')   
    
@@ -149,8 +151,10 @@ for rootAMetricFilePath in rootAJSONFilePaths :
     # plt.figure(figsize=(20, 3))  # width:20, height:3
     
     # plt.bar((locationKeys), var022, align='edge', width=0.3)
+    
+    my_path = str(Path(__file__).parent) # Figures out the absolute path for you in case your working directory moves around.
 
-    plt.savefig( rootAMetricFilePath + '.png' )
+    plt.savefig( my_path + '\\..\\results\\' + rootAMetricFilePath + '.png' )
     
     rootAFilePathIndex += 1
 
@@ -177,7 +181,7 @@ for rootAMetricFilePath in rootAJSONFilePaths :
 #######################################################
 # ROOT K
 
-rootKJSONFilePaths = ('../Medição 5 K IPV4.json', '../Medição 6 K IPV4.json', '../Medição 7 K IPV6.json', '../Medição 8 K IPV6.json')
+rootKJSONFilePaths = ('../metrics/Medição 5 K IPV4.json', '../metrics/Medição 6 K IPV4.json', '../metrics/Medição 7 K IPV6.json', '../metrics/Medição 8 K IPV6.json')
 
 rootKFilePathIndex = 1
 
@@ -235,6 +239,8 @@ for rootKMetricFilePath in rootKJSONFilePaths :
 
     print(json.dumps(percentagesPerLocation, indent=4))
 
+    rootKMetricFilePath = rootKMetricFilePath.split('/')[2]
+    
     rootKMetricFilePath = rootKMetricFilePath.replace(r'.', '')   
    
     rootKMetricFilePath = rootKMetricFilePath.replace(r'/', '')
@@ -324,14 +330,11 @@ for rootKMetricFilePath in rootKJSONFilePaths :
     # plt.figure(figsize=(20, 3))  # width:20, height:3
     
     # plt.bar((locationKeys), var022, align='edge', width=0.3)
+    
+    my_path = str(Path(__file__).parent) # Figures out the absolute path for you in case your working directory moves around.
 
-    plt.savefig( rootKMetricFilePath + '.png' )
+    plt.savefig( my_path + '\\..\\results\\' + rootKMetricFilePath + '.png' )
     
     rootKFilePathIndex+=1
 
     # plt.show()
-
-
-    ##########################################################3
-    #  COMPARAÇÃO ANO 2017 E ANO 2022
-
